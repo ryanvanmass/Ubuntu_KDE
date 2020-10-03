@@ -1,0 +1,11 @@
+
+
+#Local
+//192.168.1.3/Olympus	/media/ryan/Local/1.Olympus	cifs	username=,password=,noperm	0	0
+//192.168.1.3/Hades	/media/ryan/Local/2.Hades	cifs	username=,password=,noperm	0	0
+//192.168.1.3/Labyrinth	/media/ryan/Local/3.Labyrinth	cifs	username=,password=,noperm	0	0
+
+#Remote
+//10.100.100.6/Olympus	/media/ryan/Remote/1.Olympus(Remote)	cifs	username=,password=,noperm	0	0
+//10.100.100.6/Hades	/media/ryan/Remote/2.Hades(Remote)	cifs	username=,password=,noperm	0	0
+//10.100.100.6/Labyrinth	/media/ryan/Remote/3.Labyrinth(Remote)	cifs	username=,password=,noperm	0	0

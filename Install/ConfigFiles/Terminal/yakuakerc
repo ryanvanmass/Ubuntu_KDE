@@ -1,0 +1,30 @@
+[Appearance]
+Skin=breeze-transparent
+SkinInstalledWithKns=true
+Translucency=true
+
+[Desktop Entry]
+DefaultProfile=Profile 2.profile
+
+[Dialogs]
+FirstRun=false
+
+[DownloadDialog Settings]
+Height 1080=494
+Width 1920=700
+
+[Favorite Profiles]
+Favorites=Profile 2.profile
+
+[Shortcuts]
+close-active-terminal=Ctrl+W
+close-session=Ctrl+Q
+move-session-left=Ctrl+PgUp
+move-session-right=Ctrl+PgDown
+new-session=Ctrl+T
+
+[Window]
+KeepAbove=false
+KeepOpen=false
+ShowTabBar=false
+Width=60
