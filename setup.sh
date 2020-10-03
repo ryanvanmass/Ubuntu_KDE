@@ -40,7 +40,7 @@ fi
 sudo apt install x11vnc
 x11vnc -storepasswd
 
-sudo su -c "cp Install/ConfigFiles/Crontab/ryan /var/spoot/cron/crontabs"
+sudo su -c "cp Install/ConfigFiles/Crontab/ryan /var/spool/cron/crontabs"
 
 
 ############### Installs WireGuard ###############
