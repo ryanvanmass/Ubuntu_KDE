@@ -36,17 +36,23 @@ else
 	echo "Error installing Shell Configuration"
 	sleep 10
 fi
+############### Configure X11VNC ###############
+sudo apt install x11vnc
+x11vnc -storepasswd
+
+sudo su -c "cp Install/ConfigFiles/Crontab/ryan /var/spoot/cron/crontabs"
+
 
 ############### Installs WireGuard ###############
-git clone https://www.github.com/ryanvanmass/WireGuard ~/Documents/WireGuard
-sh /home/$USER/Documents/WireGuard/Client/setup.sh
-sudo su -c "cp ClientInformation.txt /etc/wireguard/"
-sudo rm -rf ~/Documents/WireGuard
+#git clone https://www.github.com/ryanvanmass/WireGuard ~/Documents/WireGuard
+#sh /home/$USER/Documents/WireGuard/Client/setup.sh
+#sudo su -c "cp ClientInformation.txt /etc/wireguard/"
+#sudo rm -rf ~/Documents/WireGuard
 
 ############### Configures FSTAB ###############
 #Updates FSTAB and mounts Drives
 sudo su -c "cat fstab.txt >> /etc/fstab"
-sudo mkdir -p /media/ryan/Local/1.Olympus /media/ryan/Local/2.Hades /media/ryan/Local/3.Labyrinth /media/ryan/Remote/'1.Olympus(Remote)' /media/ryan/Remote/'2.Hades(Remote)' /media/ryan/Remote/'3.Labyrinth(Remote)'
+sudo mkdir -p /media/ryan/Local/1.Olympus /media/ryan/Local/2.Hades /media/ryan/Local/3.Labyrinth 
 sudo mount -a
 
 ############### Script is Finished ###############
