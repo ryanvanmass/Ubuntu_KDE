@@ -40,7 +40,7 @@ fi
 sudo apt install x11vnc
 x11vnc -storepasswd
 
-sudo su -c "cp Install/ConfigFiles/Crontab/ryan /var/spool/cron/crontabs"
+crontab -l | { cat; echo "@reboot x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/ryan/.vnc/passwd -rfbport 5900 -shared"; } | crontab -
 
 
 ############### Installs WireGuard ###############
