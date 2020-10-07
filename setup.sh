@@ -23,8 +23,6 @@ else
 	sleep 10
 fi
 
-
-
 ############### Shell Configuration ###############
 if [ $Shell = 1 ]
 then
@@ -37,17 +35,24 @@ else
 	sleep 10
 fi
 ############### Configure X11VNC ###############
-sudo apt install x11vnc
+#Installs and sets the VNC Password
+sudo apt install -y x11vnc
 x11vnc -storepasswd
 
+#Sets VNC server to start at boot
 crontab -l | { cat; echo "@reboot x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/ryan/.vnc/passwd -rfbport 5900 -shared"; } | crontab -
-
 
 ############### Installs WireGuard ###############
 #git clone https://www.github.com/ryanvanmass/WireGuard ~/Documents/WireGuard
 #sh /home/$USER/Documents/WireGuard/Client/setup.sh
 #sudo su -c "cp ClientInformation.txt /etc/wireguard/"
 #sudo rm -rf ~/Documents/WireGuard
+
+############### Configure KWin Window Rules ###############
+cp Install/ConfigFiles/WindowRules/kwinrulesrc /home/$USER/.config/
+
+############### Configure Global Keyboard Shortcuts
+cp Install/ConfigFiles/kglobalshortcutsrc /home/$USER/.config/
 
 ############### Configures FSTAB ###############
 #Updates FSTAB and mounts Drives

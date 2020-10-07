@@ -1,0 +1,38 @@
+[1]
+Description=Settings for krunner
+clientmachine=localhost
+clientmachinematch=0
+fsplevel=2
+fsplevelrule=2
+title=KRunner — krunner
+titlematch=0
+wmclass=krunner
+wmclasscomplete=false
+wmclassmatch=1
+
+[2]
+Description=Settings for org.remmina.remmina
+clientmachine=localhost
+clientmachinematch=0
+disableglobalshortcuts=true
+disableglobalshortcutsrule=2
+title=Work PC
+titlematch=0
+wmclass=org.remmina.remmina
+wmclasscomplete=false
+wmclassmatch=1
+
+[3]
+Description=Settings for vmware
+clientmachine=localhost
+clientmachinematch=0
+disableglobalshortcuts=true
+disableglobalshortcutsrule=2
+title=Kubuntu - VMware Workstation
+titlematch=0
+wmclass=vmware
+wmclasscomplete=false
+wmclassmatch=1
+
+[General]
+count=3
