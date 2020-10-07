@@ -51,7 +51,8 @@ crontab -l | { cat; echo "@reboot x11vnc -auth guess -forever -loop -noxdamage -
 ############### Configure KWin Window Rules ###############
 cp Install/ConfigFiles/WindowRules/kwinrulesrc /home/$USER/.config/
 
-############### Configure Global Keyboard Shortcuts
+############### Configure Global Keyboard Shortcuts ###############
+rm /home/$USER/.config/kglobalshortcutsrc
 cp Install/ConfigFiles/kglobalshortcutsrc /home/$USER/.config/
 
 ############### Configures FSTAB ###############
