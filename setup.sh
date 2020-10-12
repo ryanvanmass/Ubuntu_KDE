@@ -60,9 +60,8 @@ lookandfeeltool -a 'org.kde.breezedark.desktop'
 
 ############### Configures FSTAB ###############
 #Updates FSTAB and mounts Drives
-sudo su -c "cat fstab.txt >> /etc/fstab"
-sudo mkdir -p /media/ryan/Local/1.Olympus /media/ryan/Local/2.Hades /media/ryan/Local/3.Labyrinth 
-sudo mount -a
+sh fstab.sh
+sudo mkdir -p /media/$USER/Local/Olympus /media/$USER/Local/Hades /media/$USER/Local/3.Labyrinth
 
 ############### Set Desktop Wallpaper ###############
 #Copy Wallpaper to user pichure Directory
@@ -70,16 +69,16 @@ cp Install/ConfigFiles/Desktop.png /home/$USER/Pictures
 
 # This is the command to change the desktop background on KDE plasma
 
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
+qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
     var allDesktops = desktops();
     for (i=0;i<allDesktops.length;i++) 
     {
         d = allDesktops[i];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");
-        d.writeConfig("Image", "file:///home/$USER/Pictures/Desktop.png")
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file:///home/$USER/Pictures/Desktop.png')
     }
-'
+"
 ############### Set Default Apps ###############
 cp ConfigFiles/DefaultApps/mimeapps.list /home/$USER/.config/
 
