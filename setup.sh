@@ -53,7 +53,7 @@ cp Install/ConfigFiles/WindowRules/kwinrulesrc /home/$USER/.config/
 
 ############### Configure Global Keyboard Shortcuts ###############
 rm /home/$USER/.config/kglobalshortcutsrc
-cp Install/ConfigFiles/KeybiardShortcuts/kglobalshortcutsrc /home/$USER/.config/
+cp Install/ConfigFiles/KeyboardShortcuts/kglobalshortcutsrc /home/$USER/.config/
 
 ############### Configure Global Theme ###############
 lookandfeeltool -a 'org.kde.breezedark.desktop'
