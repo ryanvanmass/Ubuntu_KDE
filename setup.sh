@@ -53,7 +53,7 @@ cp Install/ConfigFiles/WindowRules/kwinrulesrc /home/$USER/.config/
 
 ############### Configure Global Keyboard Shortcuts ###############
 rm /home/$USER/.config/kglobalshortcutsrc
-cp Install/ConfigFiles/kglobalshortcutsrc /home/$USER/.config/
+cp Install/ConfigFiles/KeybiardShortcuts/kglobalshortcutsrc /home/$USER/.config/
 
 ############### Configure Global Theme ###############
 lookandfeeltool -a 'org.kde.breezedark.desktop'
@@ -80,7 +80,7 @@ qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
     }
 "
 ############### Set Default Apps ###############
-cp ConfigFiles/DefaultApps/mimeapps.list /home/$USER/.config/
+cp Install/ConfigFiles/DefaultApps/mimeapps.list /home/$USER/.config/
 
 ############### Script is Finished ###############
 echo "It is reccomended that you restart at this time to complete set up."
