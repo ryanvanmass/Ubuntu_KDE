@@ -80,6 +80,8 @@ qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
         d.writeConfig("Image", "file:///home/$USER/Pictures/Desktop.png")
     }
 '
+############### Set Default Apps ###############
+cp ConfigFiles/DefaultApps/mimeapps.list /home/$USER/.config/
 
 ############### Script is Finished ###############
 echo "It is reccomended that you restart at this time to complete set up."
