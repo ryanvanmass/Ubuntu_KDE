@@ -34,6 +34,7 @@ else
 	echo "Error installing Shell Configuration"
 	sleep 10
 fi
+
 ############### Configure X11VNC ###############
 #Installs and sets the VNC Password
 sudo apt install -y x11vnc
@@ -43,10 +44,7 @@ x11vnc -storepasswd
 crontab -l | { cat; echo "@reboot x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/ryan/.vnc/passwd -rfbport 5900 -shared"; } | crontab -
 
 ############### Installs WireGuard ###############
-#git clone https://www.github.com/ryanvanmass/WireGuard ~/Documents/WireGuard
-#sh /home/$USER/Documents/WireGuard/Client/setup.sh
-#sudo su -c "cp ClientInformation.txt /etc/wireguard/"
-#sudo rm -rf ~/Documents/WireGuard
+git clone https://www.github.com/ryanvanmass/WireGuard ~/Documents/WireGuard
 
 ############### Configure KWin Window Rules ###############
 cp Install/ConfigFiles/WindowRules/kwinrulesrc /home/$USER/.config/
