@@ -15,7 +15,6 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install -y obs-studio
 
-
 ############### Installs OpenRazer and Polychromatic ###############
 sudo add-apt-repository -y ppa:openrazer/stable
 sudo apt update
@@ -52,7 +51,6 @@ sudo rm zoom_amd64.deb
 
 ############### Installs Joplin ###############
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
-
 
 ############### Installs VMWare Workstation ###############
 wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-15.5.6-16341506.x86_64.bundle
