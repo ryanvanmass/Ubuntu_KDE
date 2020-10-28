@@ -59,7 +59,7 @@ lookandfeeltool -a 'org.kde.breezedark.desktop'
 ############### Configures FSTAB ###############
 #Updates FSTAB and mounts Drives
 sh fstab.sh
-sudo mkdir -p /media/$USER/Local/Olympus /media/$USER/Local/Hades /media/$USER/Local/3.Labyrinth
+sudo mkdir -p /media/$USER/Local/Olympus /media/$USER/Local/Hades /media/$USER/Local/Labyrinth
 
 ############### Set Desktop Wallpaper ###############
 #Copy Wallpaper to user pichure Directory
